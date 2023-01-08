@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Porsche Next, system-ui, sans-serif;
+}
+
+.h-big {
+  height: 475px;
+}
+.bright,
+.bright:hover {
+  text-shadow: #ffff 1px 0 10px;
+}
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
+}
+.ham-top,
+.ham-bottom,
+.ham-middle {
+  position: absolute;
+  top: 9px;
+  left: 305px;
+  width: 24px;
+  height: 2px;
+  background: #000;
+}
+.ham-middle {
+  transform: translateY(7px);
+}
+.ham-bottom {
+  transform: translateY(14px);
+}

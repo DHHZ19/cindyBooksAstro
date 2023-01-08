@@ -1,0 +1,85 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Navigation from "../components/Navigation.astro";
+---
+
+<Layout title="Cindy Beauty">
+  <Navigation />
+  <!--Hero Seciton-->
+  <section
+    class="h-big mb-10 flex flex-col justify-end bg-gradient-to-r from-pink-100 via-pink-200 to-pink-100 align-middle text-2xl"
+  >
+    <!--Main CTA-->
+    <div
+      class="left-16 top-56 flex h-full animate-wave flex-col items-center justify-around sm:left-40 sm:top-20"
+    >
+      <img
+        class="h-48 w-48 animate-wave items-center sm:h-56 sm:w-56"
+        src="/CindyNailsmainLogo.png"
+        alt=""
+      />
+      <h1 class="text-4xl">Get Beatuiful Nails</h1>
+      <span>Nails you'll love</span>
+      <button
+        class="w-60 self-center rounded-2xl border border-gray-400 bg-pink-400 py-2 px-4 text-4xl font-semibold shadow transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-gray-100 sm:text-4xl"
+      >
+        Book Now!
+      </button>
+    </div>
+  </section>
+  <!-- Feed -->
+  <section>
+    <h2 class="py-3 px-6 text-3xl capitalize text-pink-400">Quailty Work</h2>
+    <div id="curator-feed-default-feed-layout">
+      <a
+        href="https://curator.io"
+        target="_blank"
+        class="crt-logo crt-tag h-4 w-full"></a>
+    </div>
+  </section>
+
+  <!--Main-->
+  <main class="flex h-screen w-full flex-col bg-pink-100">
+    <div
+      class="mt-5 py-3 px-6 text-3xl capitalize lg:py-8 lg:px-32 lg:text-4xl"
+    >
+      <h3 class="text-3xl lg:text-6xl">Policy,</h3>
+      <p>Please make sure to read the policy</p>
+    </div>
+    <p class="w-full px-6 text-xl lg:px-32 lg:text-2xl">
+      Dear Guest, for my safety and yours masks are required at time of service.
+      Please do not bring extra guests, only the client being serviced is
+      allowed inside. I do ask my clients to come in with bare nails. I do not
+      offer soak offs or refills on nail sets. Arriving at time of appointment
+      is crutial there will only be a 10 minute grace period. After the 10
+      minutes the appointment will be cancelled. Deposits are non-refundable. If
+      you need to cancel please ensure you cancel within two business days
+      before the scheduled service date.
+    </p>
+
+    <div class="mt-5 w-full px-6 lg:px-32 lg:text-6xl">
+      <h3 class="text-3xl capitalize lg:text-4xl">When can you book?</h3>
+    </div>
+
+    <p class="mt-3 w-full self-center px-6 text-xl lg:px-32 lg:text-2xl">
+      BOOKING TAKES PLACE VIA THE WEBSITE. PRESS "BOOK NOW" IN ORDER TO SECURE A
+      TIME SLOT. AVAILABILITY IS UPLOADED WEEKLY.
+    </p>
+    <button
+      class="mt-7 w-60 self-center rounded-2xl border border-gray-400 bg-pink-400 py-2 px-4 text-4xl font-semibold shadow transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-gray-100 sm:text-4xl"
+    >
+      Book Now!
+    </button>
+  </main>
+  <!--Footer-->
+  <footer
+    class="flex h-16 items-end border-t-4 border-double border-black bg-pink-400 text-black"
+  >
+    Copyright &copy; 2023
+    <a class="cursor-pointer px-1" href="https://twitter.com/DiegoCode_"
+      >DiegoCode_
+    </a>
+    made with 💗 for Cindy
+  </footer>
+</Layout>
