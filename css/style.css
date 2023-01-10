@@ -5,6 +5,9 @@
 body {
   font-family: Porsche Next, system-ui, sans-serif;
 }
+.list-heart {
+  list-style-type: "💗";
+}
 
 .h-big {
   height: 475px;
