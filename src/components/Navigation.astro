@@ -4,7 +4,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
 ---
 
 <!--Nav Section-->
-<nav class="sticky top-0 z-10 flex bg-pink-100 py-8 lg:drop-shadow">
+<nav class="bg-cindypink sticky top-0 z-10 flex py-8 lg:drop-shadow">
   <!--Logo-->
   <div
     class="flex w-40 cursor-pointer items-center justify-center text-center lg:w-1/6"
@@ -17,7 +17,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
   <div class="mx-auto hidden w-full justify-end border-solid lg:flex">
     <ul class="flex w-4/12 items-center justify-end self-center">
       <li
-        class="pointer w-3/12 cursor-pointer rounded-lg py-2 text-center hover:bg-pink-100"
+        class="pointer hover:bg-cindypink w-3/12 cursor-pointer rounded-lg py-2 text-center"
       >
         <a
           class={currentPath === "" ? "underline underline-offset-8" : ""}
@@ -25,7 +25,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
         >
       </li>
       <li
-        class="w-3/12 cursor-pointer rounded-lg py-2 text-center hover:bg-pink-100"
+        class="hover:bg-cindypink w-3/12 cursor-pointer rounded-lg py-2 text-center"
       >
         <a
           class={currentPath === "services"
@@ -35,7 +35,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
         >
       </li>
       <li
-        class="w-3/12 cursor-pointer rounded-lg py-2 text-center hover:bg-pink-100"
+        class="hover:bg-cindypink w-3/12 cursor-pointer rounded-lg py-2 text-center"
       >
         <a
           class={currentPath === "about" ? "underline underline-offset-8" : ""}
