@@ -1,9 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap");
 
 body {
   font-family: Porsche Next, system-ui, sans-serif;
+}
+.font-cursive {
+  font-family: "Lobster Two", sans-serif;
 }
 .list-heart {
   list-style-type: "💗";
