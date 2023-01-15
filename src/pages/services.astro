@@ -4,11 +4,14 @@ import AcuitySchedule from "../components/AcuitySchedule.astro";
 ---
 
 <Layout title="Services">
-  <!-- Table -->
+  <!--Menu always show -->
+  <h1 class="bright py-5 text-center text-3xl font-bold text-pink-400">
+    Arcylic Services
+  </h1>
   <table class="mt-5 min-h-full w-full py-20">
     <tr>
       <td class='w-2/4"'>
-        <table class="h-32 w-full border">
+        <table class="h-32 w-full">
           <tbody class="flex w-full flex-col items-center">
             <tr>
               <th class="text-center">GEL-X SHORT SET</th>
@@ -25,7 +28,7 @@ import AcuitySchedule from "../components/AcuitySchedule.astro";
         </table>
       </td>
       <td class="w-2/4">
-        <table class="h-32 w-full border">
+        <table class="h-32 w-full">
           <tbody class="flex w-full flex-col items-center">
             <tr>
               <th>MEDUIM SET</th>
@@ -44,7 +47,7 @@ import AcuitySchedule from "../components/AcuitySchedule.astro";
     </tr>
     <tr>
       <td class="w-2/4">
-        <table class="h-32 w-full border">
+        <table class="h-32 w-full">
           <tbody class="flex w-full flex-col items-center">
             <tr>
               <th class="text-center">Long Set</th>
@@ -61,7 +64,7 @@ import AcuitySchedule from "../components/AcuitySchedule.astro";
         </table>
       </td>
       <td class="w-2/4">
-        <table class="h-32 w-full border">
+        <table class="h-32 w-full">
           <tbody class="flex w-full flex-col items-center">
             <tr>
               <th>Gel Manicure</th>
@@ -80,7 +83,7 @@ import AcuitySchedule from "../components/AcuitySchedule.astro";
     </tr>
     <tr>
       <td class="w-2/4">
-        <table class="h-32 w-full border">
+        <table class="h-32 w-full">
           <tbody class="flex w-full flex-col items-center">
             <tr>
               <th class="text-center">Other Gel Services</th>
@@ -97,7 +100,7 @@ import AcuitySchedule from "../components/AcuitySchedule.astro";
         </table>
       </td>
       <td class="w-2/4">
-        <table class="h-32 w-full border">
+        <table class="h-32 w-full">
           <tbody class="flex w-full flex-col items-center">
             <tr>
               <th>STRUCTURE Manicure</th>
@@ -115,7 +118,7 @@ import AcuitySchedule from "../components/AcuitySchedule.astro";
       </td>
     </tr>
     <tr>
-      <table class="h-32 w-full border">
+      <table class="h-32 w-full">
         <tr>
           <th>Get Add-ons</th>
         </tr>
@@ -168,5 +171,182 @@ import AcuitySchedule from "../components/AcuitySchedule.astro";
       </table>
     </tr>
   </table>
+  <!--Menu show / hide -->
+  <div class="py-9">
+    <details
+      class="rounded-lg p-6 open:bg-pink-200 open:shadow-lg open:ring-1 open:ring-pink-400"
+      open
+    >
+      <summary
+        class="cursor-pointer select-none text-center text-3xl font-bold leading-6 text-pink-400"
+      >
+        Gel Services
+      </summary>
+      <table class="mt-5 min-h-full w-full py-20">
+        <tr>
+          <td class='w-2/4"'>
+            <table class="h-32 w-full">
+              <tbody class="flex w-full flex-col items-center">
+                <tr>
+                  <th class="text-center">GEL-X SHORT SET</th>
+                </tr>
+                <tr class="flex w-full justify-around">
+                  <td class="basis-28">Starting Price</td>
+                  <td class="basis-28 text-end">$40</td>
+                </tr>
+                <tr class="flex w-full justify-around">
+                  <td class="basis-28">French Tips</td>
+                  <td class="basis-28 text-end">$55</td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+          <td class="w-2/4">
+            <table class="h-32 w-full">
+              <tbody class="flex w-full flex-col items-center">
+                <tr>
+                  <th>MEDUIM SET</th>
+                </tr>
+                <tr class="flex w-full justify-around">
+                  <td class="basis-28">Starting Price</td>
+                  <td class="basis-28 text-end">$60</td>
+                </tr>
+                <tr class="flex w-full justify-around">
+                  <td class="basis-28"> French Tips</td>
+                  <td class="basis-28 text-end">$45</td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td class="w-2/4">
+            <table class="h-32 w-full">
+              <tbody class="flex w-full flex-col items-center">
+                <tr>
+                  <th class="text-center">Long Set</th>
+                </tr>
+                <tr class="flex w-full justify-around">
+                  <td class="basis-28">Starting Price</td>
+                  <td class="basis-28 text-end">$40</td>
+                </tr>
+                <tr class="flex w-full justify-around">
+                  <td class="basis-28">French Tips</td>
+                  <td class="basis-28 text-end">$55</td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+          <td class="w-2/4">
+            <table class="h-32 w-full">
+              <tbody class="flex w-full flex-col items-center">
+                <tr>
+                  <th>Gel Manicure</th>
+                </tr>
+                <tr class="flex w-full justify-around">
+                  <td class="basis-28">Starting Price</td>
+                  <td class="basis-28 text-end">$60</td>
+                </tr>
+                <tr class="flex w-full justify-around">
+                  <td class="basis-28"> French Tips</td>
+                  <td class="basis-28 text-end">$45</td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td class="w-2/4">
+            <table class="h-32 w-full">
+              <tbody class="flex w-full flex-col items-center">
+                <tr>
+                  <th class="text-center">Other Gel Services</th>
+                </tr>
+                <tr class="flex w-full justify-around">
+                  <td class="basis-28">Starting Price</td>
+                  <td class="basis-28 text-end">$40</td>
+                </tr>
+                <tr class="flex w-full justify-around">
+                  <td class="basis-28">French Tips</td>
+                  <td class="basis-28 text-end">$55</td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+          <td class="w-2/4">
+            <table class="h-32 w-full">
+              <tbody class="flex w-full flex-col items-center">
+                <tr>
+                  <th>STRUCTURE Manicure</th>
+                </tr>
+                <tr class="flex w-full justify-around">
+                  <td class="basis-28">Starting Price</td>
+                  <td class="basis-28 text-end">$60</td>
+                </tr>
+                <tr class="flex w-full justify-around">
+                  <td class="basis-28"> French Tips</td>
+                  <td class="basis-28 text-end">$45</td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <table class="h-32 w-full">
+            <tr>
+              <th>Get Add-ons</th>
+            </tr>
+            <tr>
+              <tbody class="flex w-full flex-col items-center">
+                <tr>
+                  <th>Designs</th>
+                </tr>
+                <tr class="flex w-full justify-around">
+                  <td class="basis-28">Marbel</td>
+                  <td class="basis-28 text-end">$1</td>
+                </tr>
+                <tr class="flex w-full justify-around">
+                  <td class="basis-28">3D Nail Art</td>
+                  <td class="basis-28 text-end">$3 - 30</td>
+                </tr>
+                <tr class="flex w-full justify-around">
+                  <td class="basis-28">French</td>
+                  <td class="basis-28 text-end">$4</td>
+                </tr>
+                <tr class="flex w-full justify-around">
+                  <td class="basis-28">Gel Nail Art</td>
+                  <td class="basis-28 text-end">$1 - 30</td>
+                </tr>
+                <tr class="flex w-full justify-around">
+                  <td class="basis-28">Encapsulation</td>
+                  <td class="basis-28 text-end">$5 - 30</td>
+                </tr>
+                <tr class="flex w-full justify-around">
+                  <td class="basis-28">Crystals</td>
+                  <td class="basis-28 text-end">$1-45</td>
+                </tr>
+              </tbody>
+            </tr>
+            <tr>
+              <tbody class="flex w-full flex-col items-center">
+                <tr>
+                  <th>Designs</th>
+                </tr>
+                <tr class="flex w-full justify-around">
+                  <td class="basis-28">Starting Price</td>
+                  <td class="basis-28 text-end">$60</td>
+                </tr>
+                <tr class="flex w-full justify-around">
+                  <td class="basis-28"> French Tips</td>
+                  <td class="basis-28 text-end">$45</td>
+                </tr>
+              </tbody>
+            </tr>
+          </table>
+        </tr>
+      </table>
+    </details>
+  </div>
+
   <AcuitySchedule />
 </Layout>
