@@ -1,4 +1,6 @@
 ---
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // remove the first "/"
 ---
 
 <!--Nav Section-->
@@ -15,19 +17,30 @@
   <div class="mx-auto hidden w-full justify-end border-solid lg:flex">
     <ul class="flex w-4/12 items-center justify-end self-center">
       <li
-        class="pointer w-3/12 cursor-pointer rounded-lg py-2 text-center underline underline-offset-8 hover:bg-pink-100"
+        class="pointer w-3/12 cursor-pointer rounded-lg py-2 text-center hover:bg-pink-100"
       >
-        <a href="/#/">Home</a>
+        <a
+          class={currentPath === "" ? "underline underline-offset-8" : ""}
+          href="/">Home</a
+        >
       </li>
       <li
         class="w-3/12 cursor-pointer rounded-lg py-2 text-center hover:bg-pink-100"
       >
-        <a href="/services/">Services</a>
+        <a
+          class={currentPath === "services"
+            ? "underline underline-offset-8"
+            : ""}
+          href="/services">Services</a
+        >
       </li>
       <li
         class="w-3/12 cursor-pointer rounded-lg py-2 text-center hover:bg-pink-100"
       >
-        <a href="/about/">About</a>
+        <a
+          class={currentPath === "about" ? "underline underline-offset-8" : ""}
+          href="/about">About Me</a
+        >
       </li>
     </ul>
   </div>
