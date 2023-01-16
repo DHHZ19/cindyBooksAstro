@@ -9,7 +9,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
   <div
     class="flex w-40 cursor-pointer items-center justify-center text-center lg:w-1/6"
   >
-    <a href="/#/" class="bright text-3xl font-bold text-pink-400"
+    <a href="/#/" class="bright text-cindypink text-3xl font-bold"
       >Cindy Beauty</a
     >
   </div>
@@ -46,7 +46,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
   </div>
   <!--Mobile-->
   <nav
-    class="absolute right-10 flex cursor-pointer rounded-lg duration-500 ease-in hover:rounded-xl hover:text-pink-400 lg:hidden"
+    class="hover:text-cindypink absolute right-10 flex cursor-pointer rounded-lg duration-500 ease-in hover:rounded-xl lg:hidden"
   >
     <div>
       <button class="navbar-burger">
@@ -91,21 +91,19 @@ const currentPath = pathname.slice(1); // remove the first "/"
       <div>
         <ul>
           <li class="mb-1">
-            <a
-              class="block rounded p-4 text-sm font-semibold hover:bg-pink-200"
-              href="#">Home</a
+            <a class="bg block rounded p-4 text-sm font-semibold" href="#"
+              >Home</a
             >
           </li>
           <li class="mb-1">
             <a
-              class="block rounded p-4 text-sm font-semibold hover:bg-pink-200"
+              class="bg block rounded p-4 text-sm font-semibold"
               href="/services/">Services</a
             >
           </li>
           <li class="mb-1">
-            <a
-              class="block rounded p-4 text-sm font-semibold hover:bg-pink-200"
-              href="/about/">About</a
+            <a class="bg block rounded p-4 text-sm font-semibold" href="/about/"
+              >About</a
             >
           </li>
         </ul>

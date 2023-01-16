@@ -9,6 +9,12 @@ body {
 .bg-cindypink {
   background-color: rgb(247 206 205);
 }
+.text-cindypink {
+  color: black;
+}
+.bg:hover {
+  background-color: rgb(247 206 205);
+}
 .font-cursive {
   font-family: "Lobster Two", sans-serif;
 }
