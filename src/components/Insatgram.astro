@@ -1,0 +1,18 @@
+---
+const response = await fetch(
+  "https://graph.instagram.com/me/media?fields=id,username,media_url,media_type&access_token=IGQWRNRFFEcEVENm1CU0VZAVjkwWi04ZA1RKSE44eVpVc21aTDhoV1hibW1ZAT3ViSFNNaGlHYnZAacFNFTVd4RE1mVTNscmJlWTRkSDlCQW1sTjlva1pZAbUczNDNTWTlkMi1Qa1ZA3NEZAPOFdfOEdlUDVRNG9Bdjk0RHMZD"
+);
+
+const data = await response.json();
+const IMG = data["data"];
+---
+
+<div class="flex">
+  {
+    IMG.map((el: any) => (
+      <div class="p-4">
+        {<img class="h-48 w-48 object-cover" src={el.media_url} alt="" />}
+      </div>
+    ))
+  }
+</div>
