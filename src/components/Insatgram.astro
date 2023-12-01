@@ -1,17 +1,42 @@
 ---
 const response = await fetch(
-  "https://graph.instagram.com/me/media?fields=id,username,media_url,media_type&access_token=IGQWRNRFFEcEVENm1CU0VZAVjkwWi04ZA1RKSE44eVpVc21aTDhoV1hibW1ZAT3ViSFNNaGlHYnZAacFNFTVd4RE1mVTNscmJlWTRkSDlCQW1sTjlva1pZAbUczNDNTWTlkMi1Qa1ZA3NEZAPOFdfOEdlUDVRNG9Bdjk0RHMZD"
+  "https://graph.instagram.com/me/media?fields=id,username,media_url,media_type,timestamp,caption&access_token=IGQWRPaVJ4TUU4djRQWlpzMGRhcmRVYTU1cFBjQmFkMkFoajRxQTQ3bTFmRy0yaGFsTlpaejRadGl2ZAFprZATRTdjZAfRHY1WFVqOWtqWklhSzVUaEN6WmdJbkFXX194OXI3NkJ1MnFHWXhZANDFvMmhjaEZAYeTBNQWcZD"
 );
 
 const data = await response.json();
 const IMG = data["data"];
 ---
 
-<div class="flex">
+<script>
+  const audioElements = document.querySelectorAll("video");
+  for (let i = 0; i < 3; i++) {
+    audioElements[i].setAttribute("autoplay", "autoplay");
+  }
+</script>
+<div class="flex overflow-x-scroll">
   {
     IMG.map((el: any) => (
-      <div class="p-4">
-        {<img class="h-48 w-48 object-cover" src={el.media_url} alt="" />}
+      <div class="flex w-full flex-col items-center">
+        <video class="w-64 max-w-xs px-2" controls>
+          <source src={el.media_url} type="video/webm" />
+        </video>
+        <div class="p-11">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="24"
+            height="24"
+            viewBox="0 0 50 50"
+          >
+            <path d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z" />
+          </svg>
+        </div>
+        <div class="text-center text-lg leading-loose">
+          <span class="block">{el.caption}</span>
+          <span class="block"> nailsbycin.dy</span>
+          <span class="block">{new Date(el.timestamp).toDateString()}</span>
+        </div>
       </div>
     ))
   }
