@@ -9,9 +9,14 @@ const IMG = data["data"];
 
 <script>
   const audioElements = document.querySelectorAll("video");
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 1; i++) {
     audioElements[i].setAttribute("autoplay", "autoplay");
   }
+  Array.from(audioElements).forEach((element) => {
+    element.addEventListener("mouseover", () => {
+      element.play();
+    });
+  });
 </script>
 <div class="flex overflow-x-scroll">
   {
