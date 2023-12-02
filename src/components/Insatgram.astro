@@ -24,17 +24,25 @@ const IMG = data["data"];
   {
     IMG.map((el: any) => (
       <div class="m-2 flex w-full max-w-xs flex-col items-center border-2 border-solid border-red-300">
-        <video
-          class="w-64 max-w-max border-red-300"
-          poster={el.thumbnail_url}
-          controls
-          playsinline
-          preload="none"
-        >
-          <source src={el.media_url} type="video/webm" />
+        {el.media_type == "IMAGE" ? (
+          <img
+            src={el.media_url}
+            alt="image of nails done by nails by cindy"
+            class="w-64 max-w-max"
+          />
+        ) : (
+          <video
+            class="w-64 max-w-max border-red-300"
+            poster={el.thumbnail_url}
+            controls
+            playsinline
+            preload="none"
+          >
+            <source src={el.media_url} type="video/webm" />
 
-          <source src={el.media_url} type="video/mp4" />
-        </video>
+            <source src={el.media_url} type="video/mp4" />
+          </video>
+        )}
         <a href={el.permalink} class="flex flex-col">
           <div class="p-3">
             <img src="/mainLogo.svg" class="w-36" />
