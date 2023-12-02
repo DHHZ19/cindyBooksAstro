@@ -24,13 +24,7 @@ const IMG = data["data"];
   {
     IMG.map((el: any) => (
       <div class="m-2 flex w-full max-w-xs flex-col items-center border-2 border-solid border-red-300">
-        <video
-          class="w-64 max-w-max"
-          poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3174/poster.png"
-          controls
-          playsinline
-          preload="none"
-        >
+        <video class="w-64 max-w-max" controls playsinline preload="none">
           <source src={el.media_url} type="video/webm" />
 
           <source src={el.media_url} type="video/mp4" />
