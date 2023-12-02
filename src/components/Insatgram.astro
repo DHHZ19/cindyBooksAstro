@@ -1,6 +1,6 @@
 ---
 const response = await fetch(
-  `https://graph.instagram.com/me/media?fields=id,username,media_url,media_type,timestamp,caption,permalink&access_token=${
+  `https://graph.instagram.com/me/media?fields=id,username,media_url,media_type,timestamp,caption,permalink,thumbnail_url&access_token=${
     import.meta.env.INSTAGRAM_USER_KEY
   }`
 );
@@ -24,7 +24,13 @@ const IMG = data["data"];
   {
     IMG.map((el: any) => (
       <div class="m-2 flex w-full max-w-xs flex-col items-center border-2 border-solid border-red-300">
-        <video class="w-64 max-w-max" controls playsinline preload="none">
+        <video
+          class="w-64 max-w-max"
+          poster={el.thumbnail_url}
+          controls
+          playsinline
+          preload="none"
+        >
           <source src={el.media_url} type="video/webm" />
 
           <source src={el.media_url} type="video/mp4" />
