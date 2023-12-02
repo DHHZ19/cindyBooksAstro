@@ -29,8 +29,11 @@ const IMG = data["data"];
           poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3174/poster.png"
           controls
           playsinline
+          preload="none"
         >
           <source src={el.media_url} type="video/webm" />
+
+          <source src={el.media_url} type="video/mp4" />
         </video>
         <a href={el.permalink} class="flex flex-col">
           <div class="p-11">
