@@ -25,7 +25,7 @@ const IMG = data["data"];
     IMG.map((el: any) => (
       <div class="m-2 flex w-full max-w-xs flex-col items-center border-2 border-solid border-red-300">
         <video
-          class="w-64 max-w-max"
+          class="w-64 max-w-max border-red-300"
           poster={el.thumbnail_url}
           controls
           playsinline
@@ -36,8 +36,8 @@ const IMG = data["data"];
           <source src={el.media_url} type="video/mp4" />
         </video>
         <a href={el.permalink} class="flex flex-col">
-          <div class="p-11">
-            <img src="/mainLogo.svg" />
+          <div class="p-3">
+            <img src="/mainLogo.svg" class="w-36" />
           </div>
           <div class="text-center text-lg leading-loose">
             <span class="block">{el.caption}</span>
