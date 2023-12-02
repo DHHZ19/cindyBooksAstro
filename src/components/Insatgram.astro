@@ -23,11 +23,11 @@ const IMG = data["data"];
 <div class="flex overflow-x-scroll">
   {
     IMG.map((el: any) => (
-      <a href={el.permalink} class="inline-flex">
-        <div class="m-2 flex w-full max-w-xs flex-col items-center border-2 border-solid border-red-300">
-          <video class="w-64 max-w-max" controls>
-            <source src={el.media_url} type="video/webm" />
-          </video>
+      <div class="m-2 flex w-full max-w-xs flex-col items-center border-2 border-solid border-red-300">
+        <video class="w-64 max-w-max" controls playsinline>
+          <source src={el.media_url} type="video/webm" />
+        </video>
+        <a href={el.permalink} class="inline-flex">
           <div class="p-11">
             <img src="/mainLogo.svg" />
           </div>
@@ -36,8 +36,8 @@ const IMG = data["data"];
             <span class="block">Nails by Cindy</span>
             <span class="block">{new Date(el.timestamp).toDateString()}</span>
           </div>
-        </div>
-      </a>
+        </a>
+      </div>
     ))
   }
 </div>
