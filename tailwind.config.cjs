@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       colors: {
         cindypink: {
-          950: "247	206	205",
+          950: "rgb(247	206	205)",
         },
       },
       fontFamily: {
