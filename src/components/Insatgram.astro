@@ -10,7 +10,7 @@ const MEDIA = data["data"];
 ---
 
 <script>
-  // const audioElements = document.querySelectorAll("video");
+  // const audioElements = document.querySelectorAll("video")
   // Array.from(audioElements).forEach((element) => {
   //   element.addEventListener("mouseover", () => {
   //     element.play();
@@ -20,10 +20,10 @@ const MEDIA = data["data"];
   //   });
   // });
 </script>
-<div class="flex overflow-x-scroll">
+<div class="flex snap-x overflow-scroll">
   {
     MEDIA.map((el: any) => (
-      <div class="m-2 flex w-full max-w-xs flex-col items-center border-2 border-solid border-red-300">
+      <div class="m-2 flex w-full max-w-xs snap-start flex-col items-center border-2 border-solid border-red-300 ">
         {el.media_type == "IMAGE" ? (
           <img
             src={el.media_url}
