@@ -25,10 +25,7 @@ body {
 .h-big {
   height: 475px;
 }
-.bright,
-.bright:hover {
-  text-shadow: #ffff 1px 0 10px;
-}
+
 .hamburger {
   cursor: pointer;
   width: 24px;
