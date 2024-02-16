@@ -9,7 +9,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        body: ["Porsche Next"],
+        body: ["Montserrat"],
       },
       keyframes: {
         fade: {
