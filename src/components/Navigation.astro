@@ -4,16 +4,16 @@ const currentPath = pathname.slice(1); // remove the first "/"
 ---
 
 <!--Nav Section-->
-<nav class="bg-cindypink sticky top-0 z-10 flex p-6 lg:drop-shadow">
+<nav class="bg-cindypink sticky top-0 z-10 flex p-4 lg:drop-shadow">
   <!--Logo-->
   <div class="flex w-40 cursor-pointer items-center justify-start text-center">
-    <a href="/#/" class="text-cindypink text-xl font-bold">Cindy Beauty</a>
+    <a href="/#/" class="font-cursive text-2xl font-bold">Cindy Beauty</a>
   </div>
   <!--Nav Items-->
   <div class="mx-auto hidden w-full justify-end border-solid lg:flex">
     <ul class="flex w-4/12 items-center justify-end self-center">
       <li
-        class="pointer hover:bg-cindypink w-3/12 cursor-pointer rounded-lg py-2 text-center"
+        class="pointer hover:bg-cindypink flex-1 cursor-pointer rounded-lg py-2 text-center"
       >
         <a
           class={currentPath === "" ? "underline underline-offset-8" : ""}
@@ -21,7 +21,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
         >
       </li>
       <li
-        class="hover:bg-cindypink w-3/12 cursor-pointer rounded-lg py-2 text-center"
+        class="hover:bg-cindypink flex-1 cursor-pointer rounded-lg py-2 text-center"
       >
         <a
           class={currentPath === "services"
@@ -31,7 +31,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
         >
       </li>
       <li
-        class="hover:bg-cindypink w-3/12 cursor-pointer rounded-lg py-2 text-center"
+        class="hover:bg-cindypink flex-1 cursor-pointer rounded-lg py-2 text-center"
       >
         <a
           class={currentPath === "about" ? "underline underline-offset-8" : ""}
