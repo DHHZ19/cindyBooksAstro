@@ -22,7 +22,7 @@ const MEDIA = data["data"];
 </script>
 <div class="flex snap-x snap-mandatory overflow-scroll">
   {
-    MEDIA.map((el: any) => (
+    MEDIA.map((el: any, idx: number) => (
       <div class="m-2 flex w-full max-w-xs snap-center snap-always flex-col items-center border-2 border-solid border-red-300 ">
         {el.media_type == "IMAGE" ? (
           <img
@@ -36,7 +36,7 @@ const MEDIA = data["data"];
             poster={el.thumbnail_url}
             controls
             playsinline
-            preload="none"
+            preload={idx < 3 ? "auto" : "none"}
           >
             <source src={el.media_url} type="video/webm" />
 
