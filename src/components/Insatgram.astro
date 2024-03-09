@@ -10,29 +10,70 @@ const MEDIA = data["data"];
 ---
 
 <script>
-  // const audioElements = document.querySelectorAll("video")
-  // Array.from(audioElements).forEach((element) => {
-  //   element.addEventListener("mouseover", () => {
-  //     element.play();
-  //   });
-  //   element.addEventListener("mouseout", () => {
-  //     element.pause();
-  //   });
-  // });
+  const audioElements = document.querySelectorAll("video");
+  Array.from(audioElements).forEach((element) => {
+    element.addEventListener("mouseover", () => {
+      element.play();
+    });
+    element.addEventListener("mouseout", () => {
+      element.pause();
+    });
+  });
+  const rightSlide = document.querySelector("#slide");
+  const leftSlide = document.querySelector("#slideLeft");
+  const scrollerContainer: any = document.querySelector("#scroller");
+  rightSlide?.addEventListener("click", () => {
+    scrollerContainer.scrollLeft += 250;
+    console.log("hello");
+  });
+  leftSlide?.addEventListener("click", () => {
+    scrollerContainer.scrollLeft -= 250;
+    console.log("hello");
+  });
 </script>
-<div class="flex snap-x snap-mandatory overflow-scroll">
+
+<div
+  id="scroller"
+  class="flex snap-x snap-mandatory overflow-scroll scroll-smooth"
+>
+  <button
+    id="slideLeft"
+    class="absolute z-10 hidden sm:block"
+    style="top: 1000px; right: calc(100vw - 100px);"
+  >
+    <img
+      class="rounded-full bg-white"
+      width="50"
+      height="50"
+      src="https://img.icons8.com/ios/f7cecd/50/circled-left-2.png"
+      alt="circled-left-2"
+    />
+  </button>
+  <button
+    id="slide"
+    class="absolute z-10 hidden sm:block"
+    style="top: 1000px; left: calc(100vw - 100px);"
+  >
+    <img
+      class="rounded-full bg-white"
+      width="50"
+      height="50"
+      src="https://img.icons8.com/ios/f7cecd/50/circled-right-2.png"
+      alt="circled-right-2"
+    />
+  </button>
   {
     MEDIA.map((el: any, idx: number) => (
-      <div class="m-2 flex w-full max-w-xs snap-center snap-always flex-col items-center border-2 border-solid border-red-300 ">
+      <div class="m-2 flex w-full max-w-xs snap-center snap-always flex-col items-center border-2 border-solid border-red-300 sm:snap-start">
         {el.media_type == "IMAGE" ? (
           <img
             src={el.media_url}
             alt="image of nails done by nails by cindy"
-            class="w-64 max-w-max"
+            class="w-60 max-w-max cursor-pointer"
           />
         ) : (
           <video
-            class="w-64 max-w-max border-red-300"
+            class="w-60 max-w-max cursor-pointer border-red-300"
             poster={el.thumbnail_url}
             controls
             playsinline
@@ -44,7 +85,7 @@ const MEDIA = data["data"];
           </video>
         )}
         <div class="p-3">
-          <img src="/mainLogo.svg" class="w-36" />
+          <img src="/mainLogo.svg" class="w-32" />
         </div>
         <div class="hover:bg-cindy text-center text-lg leading-loose">
           <span class="block">{el.caption}</span>
